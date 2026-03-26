@@ -1,0 +1,244 @@
+/* --- Global Variables (IBM Carbon Style) --- */
+:root {
+  --nav-width: 280px;
+  --ibm-blue: #0f62fe;
+  --ibm-blue-hover: #0353e9;
+  --bg-sidebar: #f4f4f4;
+  --bg-main: #ffffff;
+  --text-primary: #161616;
+  --text-secondary: #525252;
+  --border-subtle: #e0e0e0;
+  --code-bg: #161616;
+}
+
+/* --- Layout --- */
+.docs-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+/* --- Sidebar --- */
+.docs-sidebar {
+  width: var(--nav-width);
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-subtle);
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--ibm-blue);
+}
+
+.sidebar-nav {
+  padding: 1rem 0;
+}
+
+.nav-group {
+  margin-bottom: 1.5rem;
+}
+
+.nav-category {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.nav-item {
+  padding: 0.5rem 1.5rem 0.5rem 3rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+  background-color: #e8e8e8;
+  color: var(--text-primary);
+}
+
+.nav-item.active {
+  background-color: #e0e0e0;
+  border-left-color: var(--ibm-blue);
+  color: var(--ibm-blue);
+  font-weight: 500;
+}
+
+/* --- Main Content --- */
+.docs-main {
+  margin-left: var(--nav-width);
+  flex: 1;
+  padding: 3rem;
+  max-width: 1000px;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.current-path {
+  color: var(--ibm-blue);
+  font-weight: 500;
+}
+
+.doc-title {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* --- Block Renderers --- */
+.doc-p {
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.doc-h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+
+.doc-note {
+  display: flex;
+  gap: 1rem;
+  background-color: #f4f4f4;
+  border-left: 4px solid var(--ibm-blue);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.note-icon {
+  color: var(--ibm-blue);
+  flex-shrink: 0;
+}
+
+.doc-list {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.doc-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* --- Terminal Code Block --- */
+.doc-code-block {
+  background-color: var(--code-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #f4f4f4;
+  padding: 0.5rem 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+}
+
+.copy-btn {
+  background: none;
+  border: none;
+  color: #a8a8a8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.copy-btn:hover {
+  color: #ffffff;
+}
+
+.doc-code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  color: #00ff00;
+  font-family: 'IBM Plex Mono', monospace;
+  overflow-x: auto;
+}
+
+/* --- Table Styles --- */
+.table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.doc-table th, .doc-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.doc-table th {
+  background-color: var(--bg-sidebar);
+  font-weight: 600;
+}
+
+/* --- Mobile Responsiveness --- */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 20;
+  background: var(--ibm-blue);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .mobile-toggle { display: block; }
+  .docs-sidebar { transform: translateX(-100%); }
+  .docs-sidebar.open { transform: translateX(0); }
+  .docs-main { margin-left: 0; padding: 2rem 1.5rem; }
+}

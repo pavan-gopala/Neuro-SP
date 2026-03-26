@@ -32,15 +32,9 @@ def neuro_scan(file_path):
 def main():
     print(f"--- Neuro-SP Sentinel v{__version__} ---")
     
-    # OS.GETCWD() gets the folder where the user is CURRENTLY standing
-    current_dir = os.getcwd()
-    
-    # If the user typed a filename (e.g., neuro-scan myfile.txt), use it
-    if len(sys.argv) > 1:
-        target_file = sys.argv[1]
-    else:
-        # Default to README.md in the user's current folder
-        target_file = os.path.join(current_dir, "README.md")
+    # This line is the magic fix! 
+    # It looks for README.md in the folder where YOU are standing.
+    target_file = os.path.join(os.getcwd(), "README.md")
     
     print(f"--- Neuro-SP Sentinel Scan Initiated ---")
     print(f"Target: {target_file}")

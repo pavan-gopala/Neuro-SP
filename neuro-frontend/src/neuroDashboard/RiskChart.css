@@ -1,0 +1,109 @@
+/* --- Global Theme (IBM Carbon Inspired) --- */
+:root {
+  --ibm-black: #161616;
+  --ibm-gray-90: #262626;
+  --ibm-gray-70: #525252;
+  --ibm-blue: #0f62fe;
+  --ibm-danger: #da1e28;
+  --ibm-success: #24a148;
+  --text-primary: #f4f4f4;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ibm-black);
+  color: var(--text-primary);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* --- Dashboard Layout --- */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.ibm-banner {
+  background: var(--ibm-gray-90);
+  padding: 1rem 2rem;
+  font-family: var(--font-mono);
+  font-weight: bold;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--ibm-gray-70);
+  color: var(--ibm-blue);
+}
+
+.main-layout {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* --- Buttons & Controls --- */
+.ibm-btn {
+  background-color: var(--ibm-blue);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  transition: background 0.2s;
+}
+
+.ibm-btn:hover:not(:disabled) {
+  background-color: #0353e9;
+}
+
+.ibm-btn:disabled {
+  background-color: var(--ibm-gray-70);
+  cursor: not-allowed;
+}
+
+/* --- Results & D3 Container --- */
+.results-box {
+  margin-top: 2rem;
+  background: var(--ibm-gray-90);
+  border: 1px solid var(--ibm-gray-70);
+  padding: 1.5rem;
+}
+
+.chart-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #000;
+  border-radius: 4px;
+}
+
+.score-text {
+  font-weight: bold;
+  color: var(--ibm-danger);
+  font-family: var(--font-mono);
+}
+
+/* --- Terminal Output --- */
+.terminal-out {
+  background: #000;
+  color: #00ff00;
+  padding: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  overflow-x: auto;
+  border-left: 4px solid var(--ibm-blue);
+  white-space: pre-wrap;
+}
+
+/* --- Animations --- */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
