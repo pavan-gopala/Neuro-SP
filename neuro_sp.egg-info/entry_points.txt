@@ -1,0 +1,2 @@
+[console_scripts]
+neuro-scan = agents.sentinel.scanner:main
