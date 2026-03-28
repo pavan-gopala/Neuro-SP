@@ -1,0 +1,69 @@
+{
+    "nodes": {
+        "crawler.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/crawler.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "auditor.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/auditor.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "vulnerable.test.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "graph.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/graph.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "cli.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/cli.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "__init__.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/__init__.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        }
+    },
+    "edges": {},
+    "vulnerabilities": {
+        "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py": [
+            {
+                "type": "Insecure Eval",
+                "line_number": 12,
+                "entropy_score": 0,
+                "snippet": "eval(user_input)"
+            },
+            {
+                "type": "Command Injection Risk",
+                "line_number": 16,
+                "entropy_score": 0,
+                "snippet": "os.system(\"ls -la\")"
+            },
+            {
+                "type": "Command Injection Risk",
+                "line_number": 17,
+                "entropy_score": 0,
+                "snippet": "subprocess.run([\"echo\", \"Danger!\"])"
+            },
+            {
+                "type": "Insecure Deserialization",
+                "line_number": 22,
+                "entropy_score": 0,
+                "snippet": "pickle.loads(data)"
+            }
+        ]
+    }
+}
