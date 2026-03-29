@@ -34,8 +34,11 @@ class KnowledgeGraph:
                 tree = ast.parse(f.read())
             
             file_id = os.path.basename(file_path)
-            self.nodes[file_id] = {"path": file_path, "type": "FILE", "is_entry": False, "in_degree": 0}
-
+            if file_id not in self.nodes:
+                self.nodes[file_id] = {"path": file_path, "type": "FILE", "is_entry": False, "in_degree": 0}
+            else:
+                self.nodes[file_id].update({"path": file_path, "type": "FILE"})
+            
             for node in ast.walk(tree):
                 # 1. Detect Imports
                 if isinstance(node, (ast.Import, ast.ImportFrom)):
@@ -73,9 +76,10 @@ class KnowledgeGraph:
                 target_id = f"{mod.split('.')[-1]}.py"
                 if target_id not in self.edges[source_id]:
                     self.edges[source_id].append(target_id)
-                    # For in-degree tracking (Centrality)
-                    if target_id in self.nodes:
-                        self.nodes[target_id]["in_degree"] += 1
+                    # Pre-register target node to track centrality (in-degree)
+                    if target_id not in self.nodes:
+                        self.nodes[target_id] = {"type": "FILE", "is_entry": False, "in_degree": 0}
+                    self.nodes[target_id]["in_degree"] += 1
 
     def _add_env_node(self, source_id, env_id):
         if env_id not in self.nodes:

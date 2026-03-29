@@ -1,16 +1,67 @@
 {
     "nodes": {
+        "NeuroBackendApplicationTests.java": {
+            "path": "/workspaces/Neuro-SP/neuro-backend/src/test/java/com/example/neuro_admin/NeuroBackendApplicationTests.java",
+            "type": "JAVA_FILE",
+            "in_degree": 0
+        },
+        "NeuroBackendApplication.java": {
+            "path": "/workspaces/Neuro-SP/neuro-backend/src/main/java/com/example/neuro_admin/NeuroBackendApplication.java",
+            "type": "JAVA_FILE",
+            "in_degree": 0
+        },
+        "SentinelController.java": {
+            "path": "/workspaces/Neuro-SP/neuro-backend/src/main/java/com/example/neuro_admin/SentinelController.java",
+            "type": "JAVA_FILE",
+            "in_degree": 0
+        },
+        "setup.py": {
+            "path": "/workspaces/Neuro-SP/setup.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "bridge.py": {
+            "path": "/workspaces/Neuro-SP/bridge.py",
+            "type": "ENTRY_POINT",
+            "is_entry": true,
+            "in_degree": 0
+        },
+        "scanner.py": {
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 1,
+            "path": "/workspaces/Neuro-SP/agents/sentinel/scanner.py"
+        },
+        "test_walk.py": {
+            "path": "/workspaces/Neuro-SP/agents/sentinel/test_walk.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "validator.py": {
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 1,
+            "path": "/workspaces/Neuro-SP/agents/sentinel/validator.py"
+        },
+        "__init__.py": {
+            "path": "/workspaces/Neuro-SP/neuroscan/__init__.py",
+            "type": "FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
         "crawler.py": {
             "path": "/workspaces/Neuro-SP/neuroscan/crawler.py",
             "type": "FILE",
             "is_entry": false,
-            "in_degree": 0
+            "in_degree": 1
         },
         "auditor.py": {
             "path": "/workspaces/Neuro-SP/neuroscan/auditor.py",
             "type": "FILE",
             "is_entry": false,
-            "in_degree": 0
+            "in_degree": 1
         },
         "vulnerable.test.py": {
             "path": "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py",
@@ -22,22 +73,28 @@
             "path": "/workspaces/Neuro-SP/neuroscan/graph.py",
             "type": "FILE",
             "is_entry": false,
-            "in_degree": 0
+            "in_degree": 1
         },
         "cli.py": {
             "path": "/workspaces/Neuro-SP/neuroscan/cli.py",
             "type": "FILE",
             "is_entry": false,
             "in_degree": 0
-        },
-        "__init__.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/__init__.py",
-            "type": "FILE",
-            "is_entry": false,
-            "in_degree": 0
         }
     },
-    "edges": {},
+    "edges": {
+        "bridge.py": [
+            "scanner.py"
+        ],
+        "scanner.py": [
+            "validator.py"
+        ],
+        "cli.py": [
+            "crawler.py",
+            "auditor.py",
+            "graph.py"
+        ]
+    },
     "vulnerabilities": {
         "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py": [
             {
