@@ -1,4 +1,3 @@
----
 
 # 🧠 Neuro-Sovereign
 ### Privacy-First Security Intelligence. Local-Fast.
