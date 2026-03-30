@@ -67,26 +67,63 @@ def main():
         print("[!] Use --analyze to start the engine.")
         return
 
-    print("\n[+] Initializing Neuro-SP [TITAN MODE]...")
-    kg = KnowledgeGraph(args.target)
-    files = discover_files(args.target)
+    target_root = os.path.abspath(args.target)
+    print(f"\n[+] Initializing Neuro-SP [TITAN MODE] on target: {target_root} ...")
+    
+    kg = KnowledgeGraph(target_root)
+    files = discover_files(target_root)
+    
+    # DEBUG: Verify crawler finds the frontend
+    tsx_count = sum(1 for f in files if f.endswith('.tsx'))
+    print(f"[DEBUG] Crawler found {len(files)} total files ({tsx_count} are .tsx files)")
     
     all_findings = {}
+    
+    # ---------------------------------------------------------
+    # PASS 1: File Auditing & Graph Extraction
+    # ---------------------------------------------------------
     for f in files:
-        report = audit_file(f)
-        kg.analyze_file(f)
-        if report.get("findings"):
-            all_findings[f] = report["findings"]
-            print(f"  [!] {f} -> {len(report['findings'])} ISSUES")
-        else:
-            print(f"  [✓] {f} -> CLEAN")
+        # 1. Isolate the Auditor (prevent crashes on weird files)
+        try:
+            report = audit_file(f)
+        except Exception as e:
+            print(f"  [ERROR] Auditor failed on {os.path.basename(f)}: {e}")
+            report = {"findings": []}
 
-    # 3. State Persistence (PRD Section 3.A)
+        # 2. Extract AST data into the Knowledge Graph
+        kg.analyze_file(f)
+        
+        # 3. Path Normalization for Vulnerabilities Dictionary
+        # This guarantees the JSON keys match the UI node IDs exactly
+        if report and report.get("findings"):
+            abs_path = os.path.abspath(f)
+            rel_path = os.path.relpath(abs_path, target_root)
+            normalized_node_id = rel_path.replace(os.sep, '/')
+            
+            all_findings[normalized_node_id] = report["findings"]
+            print(f"  [!] {os.path.basename(f)} -> {len(report['findings'])} ISSUES")
+        else:
+            print(f"  [✓] {os.path.basename(f)} -> CLEAN")
+
+    # ---------------------------------------------------------
+    # PASS 2: Connect the Edges
+    # ---------------------------------------------------------
+    print("\n[+] Resolving Cross-Language Dependencies & Edges...")
+    kg.build_relationships()
+
+    # ---------------------------------------------------------
+    # State Persistence
+    # ---------------------------------------------------------
     report_payload = {
         "nodes": kg.nodes,
         "edges": kg.edges,
         "vulnerabilities": all_findings
     }
+    
+    graph_tsx = sum(1 for metadata in kg.nodes.values() if metadata.get("lang", "") == 'tsx')
+    print(f"[DEBUG] Knowledge Graph mapped {len(kg.nodes)} total nodes ({graph_tsx} are .tsx nodes)")
+    print(f"[DEBUG] Knowledge Graph mapped {sum(len(v) for v in kg.edges.values())} total edges")
+
     with open('graph_report.json', 'w') as f_out:
         json.dump(report_payload, f_out, indent=4)
 
@@ -94,7 +131,9 @@ def main():
     print("✅ ANALYSIS COMPLETE: Knowledge Graph Generated")
     print("="*50)
 
-    # 4. Trigger the Handshake (PRD Section 3.A)
+    # ---------------------------------------------------------
+    # Trigger the Handshake (Start Server)
+    # ---------------------------------------------------------
     port = get_free_port()
     server_thread = threading.Thread(
         target=start_titan_server, 
