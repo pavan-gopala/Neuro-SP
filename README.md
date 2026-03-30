@@ -1,15 +1,9 @@
-That's a very fair and grounded point. We want to be **disruptors**, not **antagonizers**. If the message is too aggressive, it might scare away the very professional developers and IT managers who would benefit most from the tool. 
-
-Let’s pivot the [README](https://github.com/pavan-gopala/Neuro-Sovereign/new/master?filename=README.md) to focus on **Privacy**, **Efficiency**, and **Developer Experience**. We’ll swap "Rebellion" for "Sovereignty" and "Monopoly-Killer" for "Cloud-Agnostic."
-
-Here is a cleaner, more professional version for your [Neuro-Sovereign](https://github.com/pavan-gopala/Neuro-Sovereign) repository:
-
 ---
 
 # 🧠 Neuro-Sovereign
 ### Privacy-First Security Intelligence. Local-Fast.
 
-**Neuro-Sovereign** is an open-source, local-first Security Intelligence platform. It empowers developers to manage their attack surface and security posture directly on their own hardware—ensuring total data privacy without the overhead of cloud-based subscriptions.
+**Neuro-Sovereign** is local-first Security Intelligence platform. It empowers developers to manage their attack surface and security posture directly on their own hardware—ensuring total data privacy without the overhead of cloud-based subscriptions.
 
 ## ✨ Key Principles
 * **Privacy by Design:** No accounts, no telemetry, and no data egress. Your code stays on your machine.
@@ -54,4 +48,9 @@ python -m neuroscan.cli
 
 ---
 
-**Does this feel more balanced? It still positions you as a strong alternative to the big guys, but in a way that feels professional and helpful.**
+## ⚖️ Licensing & Usage
+**Neuro-Sovereign** is committed to the community.
+* **For Individuals:** This project is Open Source and free to use for personal projects, research, and individual developers.
+* **For Enterprises:** Commercial use (organizations with >X employees or $Y revenue) requires a commercial license. This ensures we can continue to build and maintain the "Sovereign Brain" for everyone.
+
+Please contact the maintainers for enterprise licensing inquiries.
