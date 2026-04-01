@@ -1,7 +1,7 @@
 import AttackPathVisualization from './AttackPathVisualization';
 
 function App() {
-  // Render the Attack Path Visualization as the primary view for the Titan Engine
+  // Render the Attack Path Visualization as the primary view for the Engine
   return (
     <div className="App">
       <AttackPathVisualization />
