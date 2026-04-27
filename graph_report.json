@@ -1,126 +1,485 @@
 {
     "nodes": {
-        "NeuroBackendApplicationTests.java": {
-            "path": "/workspaces/Neuro-SP/neuro-backend/src/test/java/com/example/neuro_admin/NeuroBackendApplicationTests.java",
+        "/workspaces/Neuro-SP/cli/test/jest/unit/snyk-code/snyk-code-test.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/unit/snyk-code/snyk-code-test.spec.ts",
+            "label": "snyk-code-test.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/unit/lib/go-bridge.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/unit/lib/go-bridge.spec.ts",
+            "label": "go-bridge.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/snyk-config/snyk-config.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/acceptance/snyk-config/snyk-config.spec.ts",
+            "label": "snyk-config.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/auth.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/acceptance/auth.spec.ts",
+            "label": "auth.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/extra-certs.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/acceptance/extra-certs.spec.ts",
+            "label": "extra-certs.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/debuglog.spec.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/acceptance/debuglog.spec.ts",
+            "label": "debuglog.spec.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/iac/helpers.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/jest/acceptance/iac/helpers.ts",
+            "label": "helpers.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/server/middleware/client-auth.js": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/server/middleware/client-auth.js",
+            "label": "client-auth.js",
+            "type": "JS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/client/app/controllers/settings/labs.js": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/client/app/controllers/settings/labs.js",
+            "label": "labs.js",
+            "type": "JS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/test/functional/client/team_test.js": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/test/functional/client/team_test.js",
+            "label": "team_test.js",
+            "type": "JS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/Assignment5.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/Assignment5.java",
+            "label": "Assignment5.java",
             "type": "JAVA_FILE",
+            "is_entry": false,
             "in_degree": 0
         },
-        "NeuroBackendApplication.java": {
-            "path": "/workspaces/Neuro-SP/neuro-backend/src/main/java/com/example/neuro_admin/NeuroBackendApplication.java",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/jquery.form.js": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/jquery.form.js",
+            "label": "jquery.form.js",
+            "type": "JS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTFinalEndpointTest.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTFinalEndpointTest.java",
+            "label": "JWTFinalEndpointTest.java",
             "type": "JAVA_FILE",
+            "is_entry": false,
             "in_degree": 0
         },
-        "SentinelController.java": {
-            "path": "/workspaces/Neuro-SP/neuro-backend/src/main/java/com/example/neuro_admin/SentinelController.java",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTRefreshEndpoint.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTRefreshEndpoint.java",
+            "label": "JWTRefreshEndpoint.java",
             "type": "JAVA_FILE",
-            "in_degree": 0
-        },
-        "setup.py": {
-            "path": "/workspaces/Neuro-SP/setup.py",
-            "type": "FILE",
             "is_entry": false,
             "in_degree": 0
         },
-        "bridge.py": {
-            "path": "/workspaces/Neuro-SP/bridge.py",
-            "type": "ENTRY_POINT",
-            "is_entry": true,
-            "in_degree": 0
-        },
-        "scanner.py": {
-            "type": "FILE",
-            "is_entry": false,
-            "in_degree": 1,
-            "path": "/workspaces/Neuro-SP/agents/sentinel/scanner.py"
-        },
-        "test_walk.py": {
-            "path": "/workspaces/Neuro-SP/agents/sentinel/test_walk.py",
-            "type": "FILE",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/DeserializeTest.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/DeserializeTest.java",
+            "label": "DeserializeTest.java",
+            "type": "JAVA_FILE",
             "is_entry": false,
             "in_degree": 0
         },
-        "validator.py": {
-            "type": "FILE",
-            "is_entry": false,
-            "in_degree": 1,
-            "path": "/workspaces/Neuro-SP/agents/sentinel/validator.py"
-        },
-        "__init__.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/__init__.py",
-            "type": "FILE",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/Assignment5.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/Assignment5.java",
+            "label": "Assignment5.java",
+            "type": "JAVA_FILE",
             "is_entry": false,
             "in_degree": 0
         },
-        "crawler.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/crawler.py",
-            "type": "FILE",
-            "is_entry": false,
-            "in_degree": 1
-        },
-        "auditor.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/auditor.py",
-            "type": "FILE",
-            "is_entry": false,
-            "in_degree": 1
-        },
-        "vulnerable.test.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py",
-            "type": "FILE",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/jquery.form.js": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/jquery.form.js",
+            "label": "jquery.form.js",
+            "type": "JS_FILE",
             "is_entry": false,
             "in_degree": 0
         },
-        "graph.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/graph.py",
-            "type": "FILE",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTFinalEndpointTest.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTFinalEndpointTest.java",
+            "label": "JWTFinalEndpointTest.java",
+            "type": "JAVA_FILE",
             "is_entry": false,
-            "in_degree": 1
+            "in_degree": 0
         },
-        "cli.py": {
-            "path": "/workspaces/Neuro-SP/neuroscan/cli.py",
-            "type": "FILE",
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTRefreshEndpoint.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTRefreshEndpoint.java",
+            "label": "JWTRefreshEndpoint.java",
+            "type": "JAVA_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/DeserializeTest.java": {
+            "path": "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/DeserializeTest.java",
+            "label": "DeserializeTest.java",
+            "type": "JAVA_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/tap/docker-token.test.ts": {
+            "path": "/workspaces/Neuro-SP/cli/test/tap/docker-token.test.ts",
+            "label": "docker-token.test.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/test/acceptance/workspaces/setup_py-app/setup.py": {
+            "path": "/workspaces/Neuro-SP/cli/test/acceptance/workspaces/setup_py-app/setup.py",
+            "label": "setup.py",
+            "type": "PY_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/scripts/install-snyk.py": {
+            "path": "/workspaces/Neuro-SP/cli/scripts/install-snyk.py",
+            "label": "install-snyk.py",
+            "type": "PY_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/src/lib/types.ts": {
+            "path": "/workspaces/Neuro-SP/cli/src/lib/types.ts",
+            "label": "types.ts",
+            "type": "TS_FILE",
+            "is_entry": false,
+            "in_degree": 0
+        },
+        "/workspaces/Neuro-SP/cli/src/cli/commands/test/iac/local-execution/parsers/hcl-to-json-v2/parser.js": {
+            "path": "/workspaces/Neuro-SP/cli/src/cli/commands/test/iac/local-execution/parsers/hcl-to-json-v2/parser.js",
+            "label": "parser.js",
+            "type": "JS_FILE",
             "is_entry": false,
             "in_degree": 0
         }
     },
-    "edges": {
-        "bridge.py": [
-            "scanner.py"
-        ],
-        "scanner.py": [
-            "validator.py"
-        ],
-        "cli.py": [
-            "crawler.py",
-            "auditor.py",
-            "graph.py"
-        ]
-    },
+    "edges": {},
     "vulnerabilities": {
-        "/workspaces/Neuro-SP/neuroscan/vulnerable.test.py": [
+        "/workspaces/Neuro-SP/cli/test/jest/unit/snyk-code/snyk-code-test.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 97,
+                "entropy_score": 3.1,
+                "snippet": "const oauthToken = 'oauth-token';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/unit/lib/go-bridge.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 142,
+                "entropy_score": 2.58,
+                "snippet": "process.env.SNYK_TOKEN = 'random';"
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 163,
+                "entropy_score": 3.51,
+                "snippet": "process.env.SNYK_TOKEN = 'real-api-token-value';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/snyk-config/snyk-config.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 9,
+                "entropy_score": 3.03,
+                "snippet": "const expectedToken = 'my-test-token';"
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 25,
+                "entropy_score": 3.17,
+                "snippet": "const token = '123456789';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/auth.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 15,
+                "entropy_score": 2.58,
+                "snippet": "const serverToken = 'random';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/extra-certs.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 50,
+                "entropy_score": 2.0,
+                "snippet": "const token = '1234';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/debuglog.spec.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 11,
+                "entropy_score": 3.03,
+                "snippet": "const password = 'solidpassword';"
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 38,
+                "entropy_score": 2.81,
+                "snippet": "const token = 'mytoken';"
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 58,
+                "entropy_score": 2.81,
+                "snippet": "const token = 'mytoken';"
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 201,
+                "entropy_score": 3.32,
+                "snippet": "const expectedToken = 'my-bearer-token';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/jest/acceptance/iac/helpers.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 15,
+                "entropy_score": 3.17,
+                "snippet": "const SNYK_TOKEN = '123456789';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/server/middleware/client-auth.js": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 16,
+                "entropy_score": 3.18,
+                "snippet": "req.body.client_secret = 'not_available';"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/client/app/controllers/settings/labs.js": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 70,
+                "entropy_score": 3.99,
+                "snippet": "'?access_token=' + this.get('session.secure.access..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/demo-os/core/test/functional/client/team_test.js": [
             {
                 "type": "Insecure Eval",
-                "line_number": 12,
+                "line_number": 46,
                 "entropy_score": 0,
-                "snippet": "eval(user_input)"
+                "snippet": "test.assertEval(function testOwnerRoleNotAnOption(..."
             },
+            {
+                "type": "Insecure Eval",
+                "line_number": 60,
+                "entropy_score": 0,
+                "snippet": "test.assertEval(function authorIsSelectedByDefault..."
+            },
+            {
+                "type": "Insecure Eval",
+                "line_number": 118,
+                "entropy_score": 0,
+                "snippet": "test.assertEval(function testGeneralIsActive() {"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/Assignment5.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 59,
+                "entropy_score": 4.22,
+                "snippet": "PreparedStatement statement = connection.prepareSt..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/jquery.form.js": [
+            {
+                "type": "Insecure Eval",
+                "line_number": 885,
+                "entropy_score": 0,
+                "snippet": "$.globalEval(data);"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTFinalEndpointTest.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 88,
+                "entropy_score": 2.25,
+                "snippet": "String jsonSecret = \"secret\";"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/JWTRefreshEndpoint.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 48,
+                "entropy_score": 3.88,
+                "snippet": "public static final String PASSWORD = \"bm5nhSkxCXZ..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 49,
+                "entropy_score": 3.75,
+                "snippet": "private static final String JWT_PASSWORD = \"bm5n3S..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat/DeserializeTest.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 58,
+                "entropy_score": 5.48,
+                "snippet": "String token = \"rO0ABXNyADFvcmcuZHVtbXkuaW5zZWN1cm..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 69,
+                "entropy_score": 5.48,
+                "snippet": "String token = \"rO0ABXNyADFvcmcuZHVtbXkuaW5zZWN1cm..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 82,
+                "entropy_score": 5.29,
+                "snippet": "String token = \"rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZS..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/Assignment5.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 59,
+                "entropy_score": 4.22,
+                "snippet": "PreparedStatement statement = connection.prepareSt..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/jquery.form.js": [
+            {
+                "type": "Insecure Eval",
+                "line_number": 885,
+                "entropy_score": 0,
+                "snippet": "$.globalEval(data);"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTFinalEndpointTest.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 88,
+                "entropy_score": 2.25,
+                "snippet": "String jsonSecret = \"secret\";"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/JWTRefreshEndpoint.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 48,
+                "entropy_score": 3.88,
+                "snippet": "public static final String PASSWORD = \"bm5nhSkxCXZ..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 49,
+                "entropy_score": 3.75,
+                "snippet": "private static final String JWT_PASSWORD = \"bm5n3S..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/fixtures/sast/shallow_sast_webgoat_with_dotSnyk/DeserializeTest.java": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 58,
+                "entropy_score": 5.48,
+                "snippet": "String token = \"rO0ABXNyADFvcmcuZHVtbXkuaW5zZWN1cm..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 69,
+                "entropy_score": 5.48,
+                "snippet": "String token = \"rO0ABXNyADFvcmcuZHVtbXkuaW5zZWN1cm..."
+            },
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 82,
+                "entropy_score": 5.29,
+                "snippet": "String token = \"rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZS..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/test/tap/docker-token.test.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 48,
+                "entropy_score": 3.38,
+                "snippet": "process.env.SNYK_DOCKER_TOKEN = 'docker-jwt-token'..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/scripts/install-snyk.py": [
             {
                 "type": "Command Injection Risk",
-                "line_number": 16,
+                "line_number": 95,
                 "entropy_score": 0,
-                "snippet": "os.system(\"ls -la\")"
+                "snippet": "os.system(f\"{executable} -v\")"
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/src/lib/types.ts": [
+            {
+                "type": "Hardcoded Secret",
+                "line_number": 298,
+                "entropy_score": 2.0,
+                "snippet": "// auth = 'auth', // TODO: auth does not support a..."
+            }
+        ],
+        "/workspaces/Neuro-SP/cli/src/cli/commands/test/iac/local-execution/parsers/hcl-to-json-v2/parser.js": [
+            {
+                "type": "Insecure Eval",
+                "line_number": 63,
+                "entropy_score": 0,
+                "snippet": "$packages[\"github.com/zclconf/go-cty/cty\"]=(functi..."
             },
             {
-                "type": "Command Injection Risk",
-                "line_number": 17,
+                "type": "Insecure Eval",
+                "line_number": 64,
                 "entropy_score": 0,
-                "snippet": "subprocess.run([\"echo\", \"Danger!\"])"
+                "snippet": "$packages[\"github.com/zclconf/go-cty/cty/convert\"]..."
             },
             {
-                "type": "Insecure Deserialization",
-                "line_number": 22,
+                "type": "Insecure Eval",
+                "line_number": 68,
                 "entropy_score": 0,
-                "snippet": "pickle.loads(data)"
+                "snippet": "$packages[\"github.com/hashicorp/hcl/v2/ext/customd..."
+            },
+            {
+                "type": "Insecure Eval",
+                "line_number": 71,
+                "entropy_score": 0,
+                "snippet": "$packages[\"github.com/zclconf/go-cty/cty/json\"]=(f..."
+            },
+            {
+                "type": "Insecure Eval",
+                "line_number": 74,
+                "entropy_score": 0,
+                "snippet": "$packages[\"github.com/zclconf/go-cty/cty/function/..."
+            },
+            {
+                "type": "Insecure Eval",
+                "line_number": 76,
+                "entropy_score": 0,
+                "snippet": "$packages[\"github.com/hashicorp/hcl/v2/hclsyntax\"]..."
             }
         ]
-    }
+    },
+    "anchors": [
+        "setup.py"
+    ]
 }

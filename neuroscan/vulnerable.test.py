@@ -1,6 +1,8 @@
 import os
 import subprocess
 import pickle
+from neuroscan.auditor import audit_file
+
 
 # --- 1. Hardcoded Secret (High Entropy) ---
 # This should trigger the "Hardcoded Secret" rule and show a high entropy score.

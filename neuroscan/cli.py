@@ -35,6 +35,51 @@ def get_ui_path():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     return os.path.join(base_dir, 'neuro-frontend', 'dist')
 
+def get_blast_radius(full_nodes, full_edges, vulnerabilities, max_depth=2):
+    """
+    Filters 10M+ nodes down to the critical 'Blast Radius'.
+    Traces both UPSTREAM (Who calls me?) and DOWNSTREAM (What do I call?).
+    """
+    if not vulnerabilities:
+        return {"nodes": {}, "edges": {}, "vulnerabilities": {}}
+
+    critical_files = list(vulnerabilities.keys())
+    relevant_nodes = set(critical_files)
+    
+    # ── BFS Path Tracing ──
+    for _ in range(max_depth):
+        new_nodes = set()
+        for node in list(relevant_nodes):
+            # UPSTREAM: Who imports this node?
+            parents = [k for k, v in full_edges.items() if node in v]
+            new_nodes.update(parents)
+            
+            # DOWNSTREAM: What does this node import?
+            children = full_edges.get(node, [])
+            new_nodes.update(children)
+        
+        relevant_nodes.update(new_nodes)
+        if not new_nodes:
+            break # Optimization: Stop tracing if we hit dead ends
+
+    # ── Global Anchors (The Safety Net) ──
+    anchors = {"setup.py", "Dockerfile", "package.json", "requirements.txt", ".env"}
+    # Use basename to match full paths (e.g., /workspace/setup.py -> setup.py)
+    found_anchors = [f for f in full_nodes.keys() if os.path.basename(f) in anchors]
+    relevant_nodes.update(found_anchors)
+
+    # ── Final Slice (with Bulletproof Edge Check) ──
+    filtered_nodes = {k: v for k, v in full_nodes.items() if k in relevant_nodes}
+    filtered_edges = {k: [target for target in v if target in relevant_nodes] 
+                      for k, v in full_edges.items() if k in relevant_nodes}
+    
+    return {
+        "nodes": filtered_nodes, 
+        "edges": filtered_edges, 
+        "vulnerabilities": vulnerabilities,
+        "anchors": [os.path.basename(a) for a in found_anchors] # Clean names for the UI
+    }
+
 def start_titan_server(port):
     """
     PRD Section 4: High-Performance ASGI Server using Starlette.
@@ -81,12 +126,11 @@ def main():
         else:
             print(f"  [✓] {f} -> CLEAN")
 
-    # 3. State Persistence (PRD Section 3.A)
-    report_payload = {
-        "nodes": kg.nodes,
-        "edges": kg.edges,
-        "vulnerabilities": all_findings
-    }
+    # 3. State Persistence (PRD Section 3.A) - UPDATED FOR TITAN BLAST RADIUS
+    print(f"\n[*] Extracting Blast Radius from {len(kg.nodes)} total nodes...")
+    report_payload = get_blast_radius(kg.nodes, kg.edges, all_findings)
+    print(f"[+] Payload optimized: {len(report_payload['nodes'])} critical nodes identified.")
+
     with open('graph_report.json', 'w') as f_out:
         json.dump(report_payload, f_out, indent=4)
 
